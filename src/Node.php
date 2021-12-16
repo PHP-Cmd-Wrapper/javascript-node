@@ -1,6 +1,6 @@
 <?php
 
-namespace CmdWrapper\Wrapper;
+namespace CmdWrapper\Wrapper\Javascript;
 
 use ArtARTs36\ShellCommand\Executors\ProcOpenExecutor;
 use ArtARTs36\ShellCommand\Interfaces\CommandBuilder;
@@ -10,7 +10,7 @@ use CmdWrapper\Contracts\ComputedVersion;
 use CmdWrapper\Contracts\Version;
 use CmdWrapper\Contracts\Wrapper;
 
-class Example implements Wrapper
+class Node implements Wrapper
 {
     public function __construct(
         protected CommandBuilder $commandBuilder,
@@ -28,11 +28,10 @@ class Example implements Wrapper
     {
         return new ComputedVersion(...$this
             ->commandBuilder
-            ->make('git')
+            ->make('node')
             ->addOption('version')
             ->executeOrFail($this->commandExecutor)
             ->getResult()
-            ->delete(['git version '])
             ->trim()
             ->explode('.')
             ->toIntegers());

@@ -1,20 +1,20 @@
 <?php
 
-namespace CmdWrapper\Wrapper\Tests;
+namespace CmdWrapper\Wrapper\Javascript\Tests;
 
 use ArtARTs36\ShellCommand\Executors\TestExecutor;
 use ArtARTs36\ShellCommand\ShellCommander;
-use CmdWrapper\Wrapper\Example;
+use CmdWrapper\Wrapper\Javascript\Node;
 use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class NodeTest extends TestCase
 {
     /**
-     * @covers \CmdWrapper\Wrapper\Example::version
+     * @covers \CmdWrapper\Wrapper\Javascript\Node::version
      */
     public function testVersion(): void
     {
-        $wrapper = new Example(
+        $wrapper = new Node(
             new ShellCommander(),
             TestExecutor::fromSuccess('git version 1.2.3'),
         );

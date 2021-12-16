@@ -1,5 +1,5 @@
 {
-    "name": "cmd-wrapper/wrapper-name-slug",
+    "name": "cmd-wrapper/javascript-node",
     "description": "Wrapper Template",
     "type": "library",
     "require": {
@@ -16,12 +16,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "CmdWrapper\\Wrapper\\": "src/"
+            "CmdWrapper\\Wrapper\\Javascript\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CmdWrapper\\Wrapper\\Tests\\": "src/"
+            "CmdWrapper\\Wrapper\\Javascript\\Tests\\": "src/"
         }
     },
     "authors": [
