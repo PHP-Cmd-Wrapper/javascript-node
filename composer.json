@@ -5,12 +5,22 @@
     "require": {
         "php": "^8",
         "artarts36/shell-command": "^2.1.13",
-        "cmd-wrapper/wrapper-contracts": "dev-main"
+        "cmd-wrapper/wrapper-contracts": "dev-main",
+        "cmd-wrapper/wrapper-core": "dev-main",
+        "cmd-wrapper/attributes": "dev-main"
     },
     "license": "MIT",
     "repositories": [
         {
             "url": "https://github.com/PHP-Cmd-Wrapper/wrapper-contracts",
+            "type": "vcs"
+        },
+        {
+            "url": "https://github.com/PHP-Cmd-Wrapper/wrapper-core",
+            "type": "vcs"
+        },
+        {
+            "url": "https://github.com/PHP-Cmd-Wrapper/attributes",
             "type": "vcs"
         }
     ],
