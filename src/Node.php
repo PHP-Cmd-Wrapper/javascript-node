@@ -1,6 +1,6 @@
 <?php
 
-namespace CmdWrapper\Wrapper\Javascript;
+namespace CmdWrapper\Wrapper\Javascript\Node;
 
 use CmdWrapper\Wrapper\Core\BinWrapper;
 

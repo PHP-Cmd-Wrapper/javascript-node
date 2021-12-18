@@ -1,6 +1,6 @@
 <?php
 
-namespace CmdWrapper\Wrapper\Javascript;
+namespace CmdWrapper\Wrapper\Javascript\Node;
 
 use ArtARTs36\ShellCommand\Interfaces\ShellCommandInterface;
 use ArtARTs36\ShellCommand\Result\CommandResult;
@@ -11,12 +11,16 @@ class Npm extends BinWrapper
 {
     protected static string $defaultBinary = 'npm';
 
-    public function runScript(string $scriptName): CommandResult
+    #[EqualsCommand('npm run-script $scriptName')]
+    public function runScript(string $scriptName, bool $noOutput = true): CommandResult
     {
         return $this
             ->newCommand()
             ->addArgument('run-script')
             ->addArgument($scriptName)
+            ->when($noOutput, function (ShellCommandInterface $command) {
+                $command->setErrorFlow('/dev/null');
+            })
             ->executeOrFail($this->getCommandExecutor());
     }
 

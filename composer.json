@@ -5,9 +5,9 @@
     "require": {
         "php": "^8",
         "artarts36/shell-command": "^2.1.13",
-        "cmd-wrapper/wrapper-contracts": "dev-main",
-        "cmd-wrapper/wrapper-core": "dev-main",
-        "cmd-wrapper/attributes": "dev-main"
+        "cmd-wrapper/wrapper-contracts": "0.1.0",
+        "cmd-wrapper/wrapper-core": "0.1.0",
+        "cmd-wrapper/attributes": "0.1.1"
     },
     "license": "MIT",
     "repositories": [
@@ -26,12 +26,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "CmdWrapper\\Wrapper\\Javascript\\": "src/"
+            "CmdWrapper\\Wrapper\\Javascript\\Node\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CmdWrapper\\Wrapper\\Javascript\\Tests\\": "src/"
+            "CmdWrapper\\Wrapper\\Javascript\\Node\\Tests\\": "src/"
         }
     },
     "authors": [
